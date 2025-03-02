@@ -145,6 +145,25 @@ nav .logo-container h1 {
     font-size: 1.2em;
     margin-bottom: 20px;
 }
+/* About Section */
+.about {
+    text-align: center;
+    padding: 50px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about h2 {
+    font-size: 2em;
+    color: #F0B90B;
+    margin-bottom: 10px;
+}
+
+.about p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
 
 .cta-btn {
     background-color: #F0B90B;
