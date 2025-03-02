@@ -10,6 +10,8 @@ body {
 
 /* Hero Section */
 .hero {
+    display: flex;
+    flex-direction: column;
     text-align: center;
     padding: 50px 20px;
     background-color: #1e1e1e;
