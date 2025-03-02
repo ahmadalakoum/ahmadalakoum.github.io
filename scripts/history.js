@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded",async (e)=>{
     const urlParams = new URLSearchParams(window.location.search);
     // Get the wallet_id from the query string
     const walletID = urlParams.get('wallet_id');
-    const transactionHistoryURL=`${config.apiBaseUrl}/wallet/transaction_history.php?wallet_id${walletID}`;
+    const transactionHistoryURL=`${config.apiBaseUrl}/wallet/transaction_history.php?wallet_id=${walletID}`;
     const response = await fetch(transactionHistoryURL,{
         method:"GET",
         credentials:"include",
