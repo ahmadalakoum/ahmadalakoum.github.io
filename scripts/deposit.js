@@ -4,6 +4,7 @@ document.getElementById("depositForm").addEventListener("submit",async (e)=>{
 
     // Get the wallet_id from the query string
     const walletID = urlParams.get('wallet_id');
+    console.log(walletID);
     const amount = document.getElementById("amount").value.trim();
     const message = document.getElementById("responseMessage");
     message.textContent = '';
