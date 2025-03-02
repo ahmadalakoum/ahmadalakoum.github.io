@@ -1,32 +1,55 @@
-document.addEventListener("DOMContentLoaded",async (e)=>{
-    const transactionsList= document.getElementById("transactions-list");
+document.addEventListener("DOMContentLoaded", async () => {
+    const transactionsList = document.getElementById("transactions-list");
+    const filterDropdown = document.getElementById("filter");
     const urlParams = new URLSearchParams(window.location.search);
-    // Get the wallet_id from the query string
-    const walletID = urlParams.get('wallet_id');
-    const transactionHistoryURL=`${config.apiBaseUrl}/wallet/transaction_history.php?wallet_id=${walletID}`;
-    const response = await fetch(transactionHistoryURL,{
-        method:"GET",
-        credentials:"include",
-        headers:{
-            "Content-Type":"application/json",
-            "Authorization": `Bearer ${localStorage.getItem("userID")}`
+    const walletID = urlParams.get("wallet_id");
+    
+    const transactionHistoryURL = `${config.apiBaseUrl}/wallet/transaction_history.php?wallet_id=${walletID}`;
+    
+    async function fetchTransactions() {
+        const response = await fetch(transactionHistoryURL, {
+            method: "GET",
+            credentials: "include",
+            headers: {
+                "Content-Type": "application/json",
+                "Authorization": `Bearer ${localStorage.getItem("userID")}`,
+            },
+        });
+
+        const result = await response.json();
+        return result.transactions || [];
+    }
+
+    function displayTransactions(transactions, filter = "all") {
+        transactionsList.innerHTML = ""; // Clear the list before adding new items
+
+        const filteredTransactions = transactions.filter(transaction => 
+            filter === "all" || transaction.type.toLowerCase() === filter
+        );
+
+        if (filteredTransactions.length === 0) {
+            transactionsList.innerHTML = "<p>No transactions found.</p>";
+            return;
         }
-    });
-    const result = await response.json();
-    console.log(result);
-    //list all transactions
-    if(response.ok){
-        result.transactions.forEach(transaction=>{
+
+        filteredTransactions.forEach(transaction => {
             const transactionDiv = document.createElement("div");
             transactionDiv.classList.add("transaction");
             transactionDiv.innerHTML = `
-                <span>type:${transaction.type}</span>
-                <span>amount:${transaction.amount}</span>
-                <span>date:${transaction.timestamp}</span>
+                <span>Type: ${transaction.type}</span>
+                <span>Amount: ${transaction.amount}</span>
+                <span>Date: ${transaction.timestamp}</span>
             `;
             transactionsList.appendChild(transactionDiv);
         });
-    }else{
-        console.error("Error fetching transaction history",result);
     }
- });
+
+    const transactions = await fetchTransactions();
+    displayTransactions(transactions);
+
+    // Update transactions when filter changes
+    filterDropdown.addEventListener("change", () => {
+        const selectedFilter = filterDropdown.value;
+        displayTransactions(transactions, selectedFilter);
+    });
+});

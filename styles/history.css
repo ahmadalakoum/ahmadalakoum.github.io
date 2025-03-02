@@ -12,6 +12,26 @@ h1 {
     font-size: 24px;
     margin-bottom: 20px;
 }
+/* Filter dropdown */
+label {
+    font-size: 18px;
+    color: #e6e6e6;
+    margin-right: 10px;
+}
+
+#filter {
+    background-color: #1e1e1e;
+    color: #f0b90b;
+    border: 1px solid #f0b90b;
+    padding: 5px 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#filter:hover {
+    background-color: #282828;
+}
 
 #transactions-list {
     max-width: 600px;
