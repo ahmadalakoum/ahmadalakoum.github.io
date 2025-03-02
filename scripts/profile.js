@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded",async ()=>{
             "Content-Type":"application/json"
         }
     });
+    console.log(response);
     const result = await response.json();
     console.log(result);
     if(response.ok){
