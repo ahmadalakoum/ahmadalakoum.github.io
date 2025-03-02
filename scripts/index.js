@@ -9,7 +9,12 @@ function updateNavbar() {
     const userID = localStorage.getItem("userID");
     const username = localStorage.getItem("username");
 
+    const joinBtn=document.getElementById("join");
+
     if (userID) {
+        joinBtn.textContent="view Wallets";
+        joinBtn.href="/pages/view_wallets.html";
+
         // User is logged in, display profile and logout button
         usernameElement.textContent = username;
         userProfile.style.display = "flex";
