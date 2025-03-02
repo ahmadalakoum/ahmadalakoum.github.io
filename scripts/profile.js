@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded",async ()=>{
     const limit = document.getElementById("daily_limit");
 
     const profileURL=`${config.apiBaseUrl}/auth/user_profile.php`;
+    console.log(localStorage.getItem("userID"));
     const response = await fetch(profileURL,{
         method:"GET",
         credentials:"include",
@@ -14,9 +15,8 @@ document.addEventListener("DOMContentLoaded",async ()=>{
             "Authorization": `Bearer ${localStorage.getItem("userID")}`
         }
     });
-    console.log(response);
     const result = await response.json();
-    console.log(result);
+
     if(response.ok){
         email.textContent = result.data.email;
         phone.textContent = result.data.phone;
