@@ -20,7 +20,6 @@ function updateNavbar() {
         userProfile.style.display = "flex";
         navLinks.innerHTML = `
             <li><a href="/index.html">Home</a></li>
-            <li><a href="/pages/about.html">About</a></li>
             <li><a href="/pages/create_wallet.html">New wallet</a></li>
             <li><a href="/pages/view_wallets.html">View wallets</a></li>
             <li><a href="/pages/profile.html">Profile</a></li>
@@ -39,7 +38,6 @@ function updateNavbar() {
         userProfile.style.display = "none";
         navLinks.innerHTML = `
             <li><a href="index.html">Home</a></li>
-            <li><a href="/pages/about.html">About</a></li>
             <li><a href="./pages/signup.html">Sign Up</a></li>
             <li><a href="./pages/login.html">Login</a></li>
         `;
