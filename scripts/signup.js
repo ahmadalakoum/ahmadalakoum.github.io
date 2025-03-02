@@ -8,7 +8,7 @@ document.getElementById("signupForm").addEventListener("submit",async (e)=>{
     const password = document.getElementById("password").value.trim();
     const confirmPassword = document.getElementById("confirmPassword").value.trim();
     const message = document.getElementById("message");
-
+console.log(username,email,phone,address,password,confirmPassword);
     message.textContent='';
     if(!username || !email || !phone || !address || !password || !confirmPassword){
         message.textContent = "All fields are required";
