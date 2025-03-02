@@ -16,6 +16,7 @@ document.addEventListener("DOMContentLoaded",async (e)=>{
                 walletDiv.classList.add("wallet");
 
                 walletDiv.innerHTML = `
+                <span>${wallet.id}</span>
                     <h3>${wallet.wallet_name}</h3>
                     <p>Balance: ${wallet.balance} ${wallet.currency}</p>
                     <a href="deposit.html">Deposit</a>
