@@ -1,0 +1,68 @@
+body {
+
+    background-color: #121212;
+    color: #e5e5e5;
+}
+
+#logout-btn:hover {
+    background-color: #f0b90b;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #1e1e1e;
+}
+
+.hero h1 {
+    font-size: 2.5em;
+    color: #fcd535;
+}
+
+.hero p {
+    font-size: 1.2em;
+    max-width: 600px;
+    margin: auto;
+}
+
+/* Features Section */
+.features {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.features h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.feature-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.feature {
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    transition: 0.3s;
+    border: 1px solid #fcd535;
+}
+
+.feature:hover {
+    background-color: #fcd535;
+    color: #121212;
+}
+
+.feature h3 {
+    font-size: 1.5em;
+}
+
+.feature p {
+    font-size: 1em;
+}
