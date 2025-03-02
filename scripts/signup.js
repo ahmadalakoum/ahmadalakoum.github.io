@@ -1,6 +1,7 @@
 
 document.getElementById("signupForm").addEventListener("submit",async (e)=>{
     e.preventDefault();
+    const username = document.getElementById("username").value.trim();
     const email = document.getElementById("email").value.trim();
     const phone = document.getElementById("phone").value.trim();
     const address = document.getElementById("address").value.trim();
@@ -25,7 +26,7 @@ document.getElementById("signupForm").addEventListener("submit",async (e)=>{
         headers:{
             "Content-Type":"application/json",
         },
-        body:JSON.stringify({email,phone,address,password,confirmPassword})
+        body:JSON.stringify({username,email,phone,address,password,confirmPassword})
 
     });
     const result = await response.json();
