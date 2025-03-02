@@ -25,9 +25,9 @@ document.getElementById("depositForm").addEventListener("submit",async (e)=>{
     if(response.ok){
         message.style.color = "green";
         message.textContent = result.message;
-        // setTimeout(()=>{
-        //     window.location.href="./view_wallets.html";
-        // },2000);
+        setTimeout(()=>{
+            window.location.href="./view_wallets.html";
+        },2000);
         
     }else{
         message.style.color = "red";
