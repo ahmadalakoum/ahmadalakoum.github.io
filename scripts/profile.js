@@ -14,6 +14,7 @@ document.addEventListener("DOMContentLoaded",async ()=>{
         }
     });
     const result = await response.json();
+    console.log(result);
     if(response.ok){
         email.textContent = result.data.email;
         phone.textContent = result.data.phone;
