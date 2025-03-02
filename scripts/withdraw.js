@@ -1,4 +1,4 @@
-document.getElementById("withdrawForm").addEventListener("submit",async (e)=>{
+document.getElementById("depositForm").addEventListener("submit",async (e)=>{
     e.preventDefault();
     const walletID = document.getElementById("wallet_id").value.trim();
     const amount = document.getElementById("amount").value.trim();
@@ -8,7 +8,7 @@ document.getElementById("withdrawForm").addEventListener("submit",async (e)=>{
         message.textContent = "All fields are required";
         return;
     }
-    const depositURL=`${config.apiBaseUrl}/wallet/deposit.php`;
+    const depositURL=`${config.apiBaseUrl}/wallet/withdraw.php`;
     const response = await fetch(depositURL,{
         method:"POST",
         headers:{
@@ -28,6 +28,6 @@ document.getElementById("withdrawForm").addEventListener("submit",async (e)=>{
     }else{
         message.style.color = "red";
         message.textContent = result.message;
-        document.getElementById("withdrawForm").reset();
+        document.getElementById("depositForm").reset();
     }
 })
