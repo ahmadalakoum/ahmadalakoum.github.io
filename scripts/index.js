@@ -14,11 +14,11 @@ function updateNavbar() {
         usernameElement.textContent = username;
         userProfile.style.display = "flex";
         navLinks.innerHTML = `
-            <li><a href="index.html">Home</a></li>
-            <li><a href="./pages/about.html">About</a></li>
-            <li><a href="./pages/create_wallet.html">New wallet</a></li>
-            <li><a href="./pages/view_wallets.html">View wallets</a></li>
-            <li><a href="./pages/profile.html">Profile</a></li>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/pages/about.html">About</a></li>
+            <li><a href="/pages/create_wallet.html">New wallet</a></li>
+            <li><a href="/pages/view_wallets.html">View wallets</a></li>
+            <li><a href="/pages/profile.html">Profile</a></li>
 
         `;
         logoutBtn.style.display = "block";
