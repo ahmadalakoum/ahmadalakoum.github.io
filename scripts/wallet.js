@@ -2,7 +2,7 @@ document.getElementById("wallet-form").addEventListener("submit",async (e)=>{
     e.preventDefault();
     const name = document.getElementById("wallet-name").value.trim();
     const currency = document.getElementById("currency").value.trim();
-    const message = document.getElementById("message");
+    const message = document.getElementById("wallet-message");
 
     message.textContent = '';
     const userID=localStorage.getItem("userID");
@@ -17,7 +17,7 @@ document.getElementById("wallet-form").addEventListener("submit",async (e)=>{
             "Content-Type":"application/json",
             "Authorization": `Bearer ${localStorage.getItem("userID")}}`
         },
-        body:JSON.stringify({name,currency,userID})
+        body:JSON.stringify({name,currency})
     });
     const result = await response.json();
     if(response.ok){
