@@ -1,0 +1,28 @@
+document.getElementById("wallet-form").addEventListener("submit",async (e)=>{
+    e.preventDefault();
+    const name = document.getElementById("wallet-name").value.trim();
+    const currency = document.getElementById("currency").value.trim();
+    const message = document.getElementById("message");
+
+    message.textContent = '';
+    const userID=localStorage.getItem("userID");
+    if(!name ||!currency){
+        message.textContent = "All fields are required";
+        return;
+    }
+    const walletURL=`${config.apiBaseUrl}/wallet/create_wallet.php`;
+    const response = await fetch(walletURL,{
+        method:"POST",
+        headers:{
+            "Content-Type":"application/json",
+            "Authorization": `Bearer ${localStorage.getItem("userID")}}`
+        },
+        body:JSON.stringify({name,currency,userID})
+    });
+    const result = await response.json();
+    if(response.ok){
+        message.style.color = "green";
+        message.textContent = result.message;
+        document.getElementById("wallet-form").reset();
+    }
+})
