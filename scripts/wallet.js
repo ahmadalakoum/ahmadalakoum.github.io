@@ -24,6 +24,5 @@ document.getElementById("wallet-form").addEventListener("submit",async (e)=>{
         message.style.color = "green";
         message.textContent = result.message;
         document.getElementById("wallet-form").reset();
-        window.location.href='../index.html';
     }
 })
