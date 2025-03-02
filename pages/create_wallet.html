@@ -9,6 +9,22 @@
     <link rel="stylesheet" href="../styles/funds.css">
 </head>
 <body>
+    <header>
+        <nav class="flex">
+            <div class="logo-container">
+                <h1>Vaultify</h1>
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+            <!-- User Profile Section -->
+            <div class="user-profile" id="user-profile">
+                <span class="username" id="username">Username</span>  <!-- Placeholder for username -->
+                <button class="logout-btn" id="logout-btn" style="display:none;">Logout</button>
+            </div>
+        </nav>
+    </header>
     <div class="wallet-container">
         <h2>Create a Wallet</h2>
         <form id="wallet-form" method="POST">
@@ -27,6 +43,10 @@
         
         <div id="wallet-message"></div>
     </div>
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2025 Vaultify. All rights reserved.</p>
+        </footer>
     <script src="../scripts/config.js"></script>
     <script src="../scripts/wallet.js"></script>
 </body>
