@@ -6,6 +6,9 @@ body {
     margin: 0;
 }
 .profile-container {
+    display:flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     background: #1e1e1e;
     padding: 20px;
