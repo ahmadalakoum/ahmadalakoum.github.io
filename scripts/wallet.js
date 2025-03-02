@@ -10,6 +10,7 @@ document.getElementById("wallet-form").addEventListener("submit",async (e)=>{
         message.textContent = "All fields are required";
         return;
     }
+    console.log(wallet_name,currency);
     const walletURL=`${config.apiBaseUrl}/wallet/create_wallet.php`;
     const response = await fetch(walletURL,{
         method:"POST",
