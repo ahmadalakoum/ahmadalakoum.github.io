@@ -39,7 +39,7 @@ function updateNavbar() {
         userProfile.style.display = "none";
         navLinks.innerHTML = `
             <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
+            <li><a href="/pages/about.html">About</a></li>
             <li><a href="./pages/signup.html">Sign Up</a></li>
             <li><a href="./pages/login.html">Login</a></li>
         `;
