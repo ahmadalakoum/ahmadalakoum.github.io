@@ -5,8 +5,9 @@ document.addEventListener("DOMContentLoaded",async ()=>{
     const status = document.getElementById("status");
     const limit = document.getElementById("daily_limit");
 
+    const userID=localStorage.getItem("userID");
+    console.log(userID);
     const profileURL=`${config.apiBaseUrl}/auth/user_profile.php`;
-    console.log(localStorage.getItem("userID"));
     const response = await fetch(profileURL,{
         method:"GET",
         credentials:"include",
