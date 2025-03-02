@@ -1,5 +1,9 @@
 document.getElementById("withdrawForm").addEventListener("submit",async (e)=>{
     e.preventDefault();
+    const urlParams = new URLSearchParams(window.location.search);
+
+    // Get the wallet_id from the query string
+    const walletID = urlParams.get('wallet_id');
     const amount = document.getElementById("amount").value.trim();
     const message = document.getElementById("responseMessage");
     message.textContent = '';
