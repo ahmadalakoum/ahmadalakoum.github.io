@@ -19,10 +19,10 @@ document.addEventListener("DOMContentLoaded",async (e)=>{
                 <span>id:${wallet.id}</span>
                     <h3>${wallet.wallet_name}</h3>
                     <p>Balance: ${wallet.balance} ${wallet.currency}</p>
-                    <a href="deposit.html">Deposit</a>
-                        <a href="withdraw.html">Withdraw</a>
-                        <a href="transfer.html">Transfer</a>
-                        <a href="history.html">Transactions</a>
+                    <a href="deposit.html?wallet_id${wallet.id}">Deposit</a>
+                        <a href="withdraw.html?wallet_id${wallet.id}">Withdraw</a>
+                        <a href="transfer.html?wallet_id${wallet.id}">Transfer</a>
+                        <a href="history.html?wallet_id${wallet.id}">Transactions</a>
                 `;
 
                 walletsList.appendChild(walletDiv);
