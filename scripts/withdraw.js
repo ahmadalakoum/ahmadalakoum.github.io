@@ -1,4 +1,4 @@
-document.getElementById("depositForm").addEventListener("submit",async (e)=>{
+document.getElementById("withdrawForm").addEventListener("submit",async (e)=>{
     e.preventDefault();
     const walletID = document.getElementById("wallet_id").value.trim();
     const amount = document.getElementById("amount").value.trim();
