@@ -1,4 +1,4 @@
-document.getElementById("withdrawForm").addEventListener("submit",async (e)=>{
+document.getElementById("depositForm").addEventListener("submit",async (e)=>{
     e.preventDefault();
     const urlParams = new URLSearchParams(window.location.search);
 
