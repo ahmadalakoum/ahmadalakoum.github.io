@@ -19,7 +19,7 @@ document.getElementById("depositForm").addEventListener("submit",async (e)=>{
             "Content-Type":"application/json",
             "Authorization": `Bearer ${localStorage.getItem("userID")}}`
         },
-        body:JSON.stringify({wallet_id:walletID, amount})
+        body:JSON.stringify({amount})
     });
     const result = await response.json();
     if(response.ok){
@@ -32,6 +32,6 @@ document.getElementById("depositForm").addEventListener("submit",async (e)=>{
     }else{
         message.style.color = "red";
         message.textContent = result.message;
-        document.getElementById("withdrawForm").reset();
+        document.getElementById("depositForm").reset();
     }
 })
