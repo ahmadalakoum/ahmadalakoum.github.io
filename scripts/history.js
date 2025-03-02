@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded",async (e)=>{
         }
     });
     const result = await response.json();
+    console.log(result);
     //list all transactions
     if(response.ok){
         result.transactions.forEach(transaction=>{
