@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded",async (e)=>{
             transactionDiv.innerHTML = `
                 <span>type:${transaction.type}</span>
                 <span>amount:${transaction.amount}</span>
-                <span>date:${transaction.date}</span>
+                <span>date:${transaction.timestamp}</span>
             `;
             transactionsList.appendChild(transactionDiv);
         });
