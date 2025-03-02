@@ -2,9 +2,6 @@
 body {
     background-color: #121212;
     color: #f0b90b;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     height: 100vh;
     margin: 0;
 }
