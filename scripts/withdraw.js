@@ -8,8 +8,8 @@ document.getElementById("depositForm").addEventListener("submit",async (e)=>{
         message.textContent = "All fields are required";
         return;
     }
-    const depositURL=`${config.apiBaseUrl}/wallet/withdraw.php`;
-    const response = await fetch(depositURL,{
+    const withdrawURL=`${config.apiBaseUrl}/wallet/withdraw.php`;
+    const response = await fetch(withdrawURL,{
         method:"POST",
         headers:{
             "Content-Type":"application/json",
