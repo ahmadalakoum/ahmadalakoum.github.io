@@ -16,7 +16,7 @@ function updateNavbar() {
         navLinks.innerHTML = `
             <li><a href="index.html">Home</a></li>
             <li><a href="./pages/about.html">About</a></li>
-            <li><a href="./pages/create_wallet.html">MyWallet</a></li>
+            <li><a href="./pages/create_wallet.html">New wallet</a></li>
             <li><a href="./pages/profile.html">Profile</a></li>
 
         `;
