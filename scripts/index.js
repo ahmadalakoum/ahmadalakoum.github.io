@@ -12,8 +12,6 @@ function updateNavbar() {
     const joinBtn=document.getElementById("join");
 
     if (userID) {
-        joinBtn.textContent="View Wallets";
-        joinBtn.href="/pages/view_wallets.html";
 
         // User is logged in, display profile and logout button
         usernameElement.textContent = username;
