@@ -28,9 +28,14 @@ document.getElementById("change-password-form").addEventListener("submit",async 
     if(response.ok){
         message.style.color = "green";
         message.textContent = result.message;
-        setTimeout(()=>{
-            window.location.href="./login.html"; // Redirect to login
-        },1500);
+        if(result.message === "success"){
+            setTimeout(()=>{
+                window.location.href = "login.html";
+            },2000);
+        }
+        else{
+            message.textContent = result.message;
+        }
     }
     else{
         message.style.color = "red";
