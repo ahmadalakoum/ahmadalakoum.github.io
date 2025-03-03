@@ -1,8 +1,8 @@
 document.getElementById("change-password-form").addEventListener("submit",async (e)=>{
     e.preventDefault();
-    const oldPassword = document.getElementById("old-password").value.trim();
-    const newPassword = document.getElementById("new-password").value.trim();
-    const confirmPassword = document.getElementById("confirm-password").value.trim();
+    const oldPassword = document.getElementById("currentPassword").value.trim();
+    const newPassword = document.getElementById("newPassword").value.trim();
+    const confirmPassword = document.getElementById("confirmPassword").value.trim();
     const message = document.getElementById("message");
     message.textContent = '';
     if(!oldPassword ||!newPassword ||!confirmPassword){
