@@ -2,7 +2,6 @@ function updateNavbar() {
     const navLinks = document.getElementById("nav-links");
     const userProfile = document.getElementById("user-profile");
     const usernameElement = document.getElementById("username");
-    const profileIcon = document.getElementById("profile-icon");
     const logoutBtn = document.getElementById("logout-btn");
 
     // Check if user is logged in by checking localStorage for userID
@@ -13,7 +12,7 @@ function updateNavbar() {
     const joinBtn=document.getElementById("join");
 
     if (userID) {
-        joinBtn.textContent="view Wallets";
+        joinBtn.textContent="View Wallets";
         joinBtn.href="/pages/view_wallets.html";
 
         // User is logged in, display profile and logout button
