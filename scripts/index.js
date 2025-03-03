@@ -8,6 +8,7 @@ function updateNavbar() {
     // Check if user is logged in by checking localStorage for userID
     const userID = localStorage.getItem("userID");
     const username = localStorage.getItem("username");
+    console.log(userID, username);
 
     const joinBtn=document.getElementById("join");
 
