@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="../assets/style.css">
     <link rel="stylesheet" href="../styles/main.css">
     <link rel="stylesheet" href="../styles/profile.css">
-
 </head>
 <body>
     <header>
@@ -25,6 +24,7 @@
             </div>
         </nav>
     </header>
+
     <div class="flex center">
         <div class="profile-container">
             <h1>User Profile</h1>
@@ -46,18 +46,25 @@
                     <p id="status"></p>
                 </div>
                 <div>
-                    <label for="daily_limit">Daily Limit</label>
+                    <label for="daily_limit">Daily Limit:</label>
                     <p id="daily_limit"></p>
                 </div>
+            </div>
 
+            <!-- Buttons for Change Password and Update Profile -->
+            <div class="profile-actions">
+                <a href="change-password.html" class="btn">Change Password</a>
+                <a href="update-profile.html" class="btn">Update Profile</a>
             </div>
         </div>
     </div>
-        <!-- Footer -->
-        <footer>
-            <p>&copy; 2025 Vaultify. All rights reserved.</p>
-        </footer>
-        <script src="../scripts/index.js"></script> 
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Vaultify. All rights reserved.</p>
+    </footer>
+
+    <script src="../scripts/index.js"></script> 
     <script src="../scripts/config.js"></script>
     <script src="../scripts/profile.js"></script>
 </body>

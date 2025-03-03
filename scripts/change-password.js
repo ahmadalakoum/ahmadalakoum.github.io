@@ -1,0 +1,39 @@
+document.getElementById("change-password-form").addEventListener("submit",async (e)=>{
+    e.preventDefault();
+    const oldPassword = document.getElementById("old-password").value.trim();
+    const newPassword = document.getElementById("new-password").value.trim();
+    const confirmPassword = document.getElementById("confirm-password").value.trim();
+    const message = document.getElementById("message");
+    message.textContent = '';
+    if(!oldPassword ||!newPassword ||!confirmPassword){
+        message.textContent = "All fields are required";
+        return;
+    }
+    const userID=localStorage.getItem("userID");
+    if(newPassword!==confirmPassword){
+        message.textContent = "Passwords do not match";
+        return;
+    }
+    const changePasswordURL=`${config.apiBaseUrl}/auth/change_password.php`;
+    const response = await fetch(changePasswordURL,{
+        method:"POST",
+        headers:{
+            "Content-Type":"application/json",
+            "Authorization": `Bearer ${localStorage.getItem("userID")}`
+        },
+        body:JSON.stringify({currentPassword:oldPassword, newPassword,confirmPassword})
+
+    })
+    const result = await response.json();
+    if(response.ok){
+        message.style.color = "green";
+        message.textContent = result.message;
+        setTimeout(()=>{
+            window.location.href="./login.html"; // Redirect to login
+        },1500);
+    }
+    else{
+        message.style.color = "red";
+        message.textContent = result.message;
+    }
+})
