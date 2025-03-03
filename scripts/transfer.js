@@ -28,6 +28,9 @@ document.getElementById("transferForm").addEventListener("submit",async (e)=>{
     if(response.ok){
         msg.style.color="green";
         msg.textContent=result.message;
+        setTimeout(()=>{
+            window.location.href="./view_wallets.html";
+        },2000);
     }else{
         msg.style.color="red";
         msg.textContent=result.message;
