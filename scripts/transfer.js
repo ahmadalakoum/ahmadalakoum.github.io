@@ -15,7 +15,7 @@ document.getElementById("transferForm").addEventListener("submit",async (e)=>{
         return;
     }
     const userID=localStorage.getItem("userID");
-    const transferURL=`${config.apiBaseUrl}/wallet/transfer.php?senderWalletID=${walletID}`;
+    const transferURL=`${config.apiBaseUrl}/wallet/internal_transfer.php?senderWalletID=${walletID}`;
     const response = await fetch(transferURL,{
         method:"POST",
         headers:{
