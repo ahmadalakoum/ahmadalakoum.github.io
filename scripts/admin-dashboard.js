@@ -15,6 +15,7 @@ document.addEventListener("DOMContentLoaded",async (e)=>{
         }
    });
    const result = await response.json();
+   console.log(result);
    if (data.status === "success") {
     document.getElementById("totalUsers").textContent = data.data.user_growth.total_users;
     document.getElementById("newUsers").textContent = data.data.user_growth.new_users_this_month;
