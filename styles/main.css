@@ -198,6 +198,7 @@ nav .logo-container h1 {
     border-radius: 5px;
 }
 .feature h2 {
+    margin-bottom:15px;
     color: #F0B90B;
     font-size: 1.5em;
     margin-top: 10px;
