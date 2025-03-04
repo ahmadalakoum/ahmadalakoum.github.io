@@ -16,15 +16,15 @@ document.addEventListener("DOMContentLoaded",async (e)=>{
    });
    const result = await response.json();
    console.log(result);
-   if (data.status === "success") {
-    document.getElementById("totalUsers").textContent = data.data.user_growth.total_users;
-    document.getElementById("newUsers").textContent = data.data.user_growth.new_users_this_month;
-    document.getElementById("totalTransactions").textContent = data.data.transactions.total_transactions;
+   if (result.status === "success") {
+    document.getElementById("totalUsers").textContent = result.data.user_growth.total_users;
+    document.getElementById("newUsers").textContent = result.data.user_growth.new_users_this_month;
+    document.getElementById("totalTransactions").textContent = result.data.transactions.total_transactions;
 
     const transactionsTable = document.getElementById("transactionsTable");
     transactionsTable.innerHTML = "";
 
-    for (const [currency, stats] of Object.entries(data.data.transactions.currencies)) {
+    for (const [currency, stats] of Object.entries(result.data.transactions.currencies)) {
         const row = `
             <tr>
                 <td>${currency}</td>
