@@ -43,7 +43,6 @@ document.getElementById("loginForm").addEventListener("submit",async (e)=>{
     }else{
         message.style.color = "red";
         message.textContent = result.message;
-        console.log(message);
     }
 
 });
