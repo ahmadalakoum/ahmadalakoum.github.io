@@ -39,11 +39,11 @@ document.getElementById("loginForm").addEventListener("submit",async (e)=>{
                     window.location.href = "../index.html"; 
                 }, 1500);
             }
-        }else{
-            message.style.color = "red";
-            message.textContent = result.message;
-            console.log(message);
         }
+    }else{
+        message.style.color = "red";
+        message.textContent = result.message;
+        console.log(message);
     }
 
 });
