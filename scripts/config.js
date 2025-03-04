@@ -1,3 +1,3 @@
 const config={
-    apiBaseUrl: "http://localhost/Vaultify/vaultify-server/v1"
+    apiBaseUrl: "http://35.180.134.248/Vaultify/vaultify-server/v1"
 };
