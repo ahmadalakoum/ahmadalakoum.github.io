@@ -10,7 +10,8 @@ document.addEventListener("DOMContentLoaded",async (e)=>{
     method:"GET",
     credentials:"include",
     headers:{
-        "Content-Type":"application/json"
+        "Content-Type":"application/json",
+        "Authorization": `Bearer ${localStorage.getItem("userID")}`
         }
    });
    const result = await response.json();
