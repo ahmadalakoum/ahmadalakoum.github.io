@@ -29,7 +29,7 @@ document.getElementById("loginForm").addEventListener("submit",async (e)=>{
         localStorage.setItem("role",result.user.role);
         if(result.user.role == "admin"){
             setTimeout(() => {
-                window.location.href = "./admin/index.html"; 
+                window.location.href = "../admin/admin-dashboard.html"; 
             }, 1500);
         }else{
             setTimeout(() => {
