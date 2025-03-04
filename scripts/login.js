@@ -27,9 +27,15 @@ document.getElementById("loginForm").addEventListener("submit",async (e)=>{
         localStorage.setItem("userID",result.user.id);
         localStorage.setItem("username",result.user.username);
         localStorage.setItem("role",result.user.role);
-        setTimeout(() => {
-            window.location.href = "../index.html"; 
-        }, 1500);
+        if(result.user.role == "admin"){
+            setTimeout(() => {
+                window.location.href = "./admin/index.html"; 
+            }, 1500);
+        }else{
+            setTimeout(() => {
+                window.location.href = "../index.html"; 
+            }, 1500);
+        }
     }
 
 });
