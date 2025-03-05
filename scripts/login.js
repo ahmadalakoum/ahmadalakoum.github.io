@@ -19,10 +19,6 @@ document.getElementById("loginForm").addEventListener("submit",async (e)=>{
     })
     const result = await response.json();
     console.log(result);
-    console.log(response);
-    console.log(result.user.id);
-    console.log(result.user.username);
-    console.log(result.user.role);
     if(response.ok){
         if(result.status === 'success'){
             message.style.color = "green";
@@ -30,15 +26,15 @@ document.getElementById("loginForm").addEventListener("submit",async (e)=>{
             localStorage.setItem("userID",result.user.id);
             localStorage.setItem("username",result.user.username);
             localStorage.setItem("role",result.user.role);
-            if(result.user.role=='admin'){
-                setTimeout(() => {
-                    window.location.href = "../admin/admin-dashboard.html"; 
-                }, 1500);
-            }else{
-                setTimeout(() => {
-                    window.location.href = "../index.html"; 
-                }, 1500);
-            }
+            // if(result.user.role=='admin'){
+            //     setTimeout(() => {
+            //         window.location.href = "../admin/admin-dashboard.html"; 
+            //     }, 1500);
+            // }else{
+            //     setTimeout(() => {
+            //         window.location.href = "../index.html"; 
+            //     }, 1500);
+            // }
         }
     }else{
         message.style.color = "red";
