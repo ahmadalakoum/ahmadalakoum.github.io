@@ -37,6 +37,7 @@ document.getElementById("transferForm").addEventListener("submit",async (e)=>{
     }else{
         msg.style.color="red";
         msg.textContent=result.message;
+        document.getElementById("depositForm").reset();
     }
     }
 })
