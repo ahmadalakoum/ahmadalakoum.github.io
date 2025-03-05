@@ -8,7 +8,7 @@ document.getElementById("ticket-form").addEventListener("submit",async(e)=>{
         message.textContent = "All fields are required";
         return;
     }
-    const ticketURL=`${config.apiBaseUrl}/create_ticket.php`;
+    const ticketURL=`${config.apiBaseUrl}/tickets/create_ticket.php`;
     const response = await fetch(ticketURL,{
         method:"POST",
         headers:{
