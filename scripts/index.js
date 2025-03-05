@@ -15,7 +15,7 @@ function updateNavbar() {
     if (userID) {
         if(role === "admin"){
             navLinks.innerHTML =`
-                <li><a href="/tickets.html">View Tickets</a></li>
+                <li><a href="/admin/tickets.html">View Tickets</a></li>
             `;
 
         }else{
