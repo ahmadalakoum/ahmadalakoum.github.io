@@ -2,7 +2,7 @@ document.getElementById("wallet-form").addEventListener("submit",async (e)=>{
     e.preventDefault();
     const wallet_name = document.getElementById("wallet-name").value.trim();
     const currency = document.getElementById("currency").value.trim();
-    const message = document.getElementById("wallet-message");
+    const message = document.getElementById("responseMessage");
 
     message.textContent = '';
     const userID=localStorage.getItem("userID");
