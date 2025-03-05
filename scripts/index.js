@@ -7,14 +7,18 @@ function updateNavbar() {
     // Check if user is logged in by checking localStorage for userID
     const userID = localStorage.getItem("userID");
     const username = localStorage.getItem("username");
+    const role = localStorage.getItem("role");
     console.log(userID, username);
 
     const joinBtn=document.getElementById("join");
 
     if (userID) {
+        if(role === "admin"){
+            navLinks.innerHTML =`
+                <li><a href="/tickets.html">View Tickets</a></li>
+            `;
 
-        // User is logged in, display profile and logout button
-        usernameElement.textContent = username;
+        }else{
         userProfile.style.display = "flex";
         navLinks.innerHTML = `
             <li><a href="/index.html">Home</a></li>
@@ -23,6 +27,9 @@ function updateNavbar() {
             <li><a href="/pages/profile.html">Profile</a></li>
 
         `;
+        }
+        // User is logged in, display profile and logout button
+        usernameElement.textContent = username;
         logoutBtn.style.display = "block";
 
         // Handle Logout Button Click
