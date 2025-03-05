@@ -26,7 +26,9 @@ document.getElementById("wallet-form").addEventListener("submit",async (e)=>{
         if(result.status === "success"){
         message.style.color = "green";
         message.textContent = result.message;
-        // window.location.href="../index.html";
+        setTimeout(()=>{
+            window.location.href="./view_wallets.html";
+        },1500);
         }else{
             message.style.color = "red";
             message.textContent = result.message;
