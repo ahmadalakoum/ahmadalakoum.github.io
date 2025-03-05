@@ -19,10 +19,6 @@ document.getElementById("loginForm").addEventListener("submit",async (e)=>{
     })
     const result = await response.json();
     console.log(result);
-    console.log(response);
-    console.log(result.user.id);
-    console.log(result.user.username);
-    console.log(result.user.role);
     if(response.ok){
         if(result.status === 'success'){
             message.style.color = "green";
