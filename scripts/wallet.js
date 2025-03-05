@@ -21,12 +21,15 @@ document.getElementById("wallet-form").addEventListener("submit",async (e)=>{
         body:JSON.stringify({wallet_name,currency})
     });
     const result = await response.json();
+    console.log(result);
     if(response.ok){
+        if(result.status === "success"){
         message.style.color = "green";
         message.textContent = result.message;
-        window.location.href="../index.html";
-    }else{
-        message.style.color = "red";
-        message.textContent = result.message;
+        // window.location.href="../index.html";
+        }else{
+            message.style.color = "red";
+            message.textContent = result.message;
+        }
     }
 })
