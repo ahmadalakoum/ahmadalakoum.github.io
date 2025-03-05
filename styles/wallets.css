@@ -1,9 +1,5 @@
 /* wallets.css */
-body {
-    background-color: #141416; /* Dark background */
-    color: #ffffff;
-    height: 100vh;
-}
+
 
 /* Container for wallets list */
 .container {
